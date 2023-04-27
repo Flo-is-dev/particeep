@@ -1,0 +1,233 @@
+* {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  font-size: 0.7rem;
+  font-weight: 600;
+  user-select: none;
+}
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgb(240, 240, 240);
+}
+form {
+  width: 40%;
+  min-width: 380px;
+  max-width: 650px;
+  background: white;
+  display: grid;
+  grid-template-rows: repeat(4, 54px);
+  padding: 10px 25px 10px;
+  border-radius: 0 0 5px 5px;
+  position: relative;
+}
+h1 {
+  font-size: 1.2rem;
+}
+
+input[type="text"],
+input[type="date"],
+input[type="tel"] {
+  margin: 7px 0 7px;
+  border: 2px solid rgb(237, 237, 237);
+  height: 45%;
+  width: 100%;
+  box-shadow: inset 0px 1px 2px rgba(0, 0, 0, 0.077);
+  border-radius: 4px;
+  font-size: 0.9rem;
+  padding-left: 10px;
+  color: gray;
+  font-weight: 400;
+  font-size: 0.7rem;
+}
+
+input[type="text"]:focus,
+input[type="date"]:focus,
+input[type="tel"]:focus {
+  border: 2px solid #fc9b5f;
+}
+input[type="text"]::placeholder,
+input[type="date"]::placeholder,
+input[type="tel"]::placeholder {
+  color: rgb(195, 195, 195);
+}
+
+input[type="radio"] {
+  border: 0px;
+
+  height: 1em;
+}
+
+.info {
+  padding: 0 0 10px;
+  border-radius: 5px 5px 0 0;
+  background: white;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+  gap: 20px;
+}
+.info::after {
+  top: -3px;
+  position: absolute;
+  content: "";
+  width: 50px;
+  height: 5px;
+  border-radius: 5px 0 0 0;
+  background-color: rgb(255, 111, 0);
+}
+.info::before {
+  top: -3px;
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 5px;
+  border-radius: 5px 5px 0 0;
+  background-color: rgba(255, 130, 35, 0.699);
+}
+.progress-info p {
+  background: rgb(255, 111, 0);
+  display: inline;
+  color: rgb(245, 243, 243);
+  padding: 2px 6px;
+  border-radius: 15px;
+  letter-spacing: 1px;
+  font-size: 0.7rem;
+}
+
+#dateofbirth {
+  display: block;
+}
+
+.choice-container {
+  display: grid;
+  grid-template-columns: auto;
+  gap: 10%;
+  margin: 5px 0 12px;
+}
+
+input[type="submit"] {
+  border: none;
+  background: rgb(255, 111, 0);
+  width: 18%;
+  margin: 0 auto 0;
+  padding: 5px;
+  border-radius: 2px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  margin-right: 0;
+}
+input[type="submit"]:hover {
+  background: #fc9b5f;
+}
+
+.email-container {
+  padding: 5px 0 12px;
+}
+.switch-container {
+  display: flex;
+  flex: 1 1;
+}
+.switch-container p {
+  display: inline-block;
+}
+.switch {
+  display: inline-block;
+  position: relative;
+  width: 26px;
+  height: 15px;
+  cursor: pointer;
+  overflow: hidden;
+  margin-left: 10px;
+}
+.switch input {
+  position: absolute;
+  top: -30px;
+  top: -30px;
+  width: 0;
+  height: 0;
+}
+.switch input + span {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #dededf;
+  border-radius: 20px;
+}
+.switch input + span:before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  left: 2px;
+  width: 12px;
+  height: 12px;
+  background: white;
+  border-radius: 50%;
+  transform: translateY(-50%);
+  transition: all 0.2s;
+  z-index: 10;
+}
+.switch input:checked + span {
+  background: #9a9a9b;
+}
+.switch input:checked + span:before {
+  left: 12px;
+}
+
+.drop-zone {
+  height: 100px;
+  display: flex;
+  margin: 10px 0;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 5px;
+  border: 2px dotted rgb(230, 230, 230);
+  cursor: pointer;
+}
+
+.drop-zone i,
+.drop-zone span {
+  color: gray;
+}
+
+.drop-zone--over {
+  border-style: solid;
+}
+
+.drop-zone__input {
+  display: none;
+}
+
+.drop-zone__thumb {
+  width: 50%;
+  height: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: #9a9a9b;
+  background-size: cover;
+  position: relative;
+}
+.drop-zone__thumb::after {
+  /* On récupère la valeur de l'attribut data-label de la partie html */
+  content: attr(data-label);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 5px 0;
+  color: white;
+  background: rgba(0, 0, 0, 0.486);
+  font-size: 0.9rem;
+  text-align: center;
+}

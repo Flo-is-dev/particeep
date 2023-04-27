@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="./script.js" defer></script>
+
+</head>
+
+<body>
+
+  <div class="main">
+    <div class="info">
+      <!-- Barre de progress orange -->
+      <span id="progress"></span>
+      <!-- Page actuelle -->
+      <div class="progress-info">
+        <p>1/16</p>
+      </div>
+      <h1>Vos informations</h1>
+    </div>
+
+
+    <form action="" id="form">
+
+
+
+      <div class="pseudo-container">
+        <label for="pseudo">PRÉNOM*</label>
+        <input type="text" autocomplete="off" id="pseudo" placeholder="Donnez votre réponse ici">
+
+      </div>
+
+      <div class="pseudo-container">
+        <label for="pseudo">NOM*</label>
+        <input type="text" autocomplete="off" id="pseudo" placeholder="Donnez votre réponse ici">
+
+      </div>
+
+      <div class="address-container">
+        <label for="address">ADRESSE COMPLÈTE*</label>
+        <input type="text" autocomplete="off" id="address" placeholder="Donnez votre réponse ici">
+
+      </div>
+
+      <div class="dateofbirth-container">
+        <label for="dateofbirth">DATE DE NAISSANCE*</label>
+        <input type="date" autocomplete="off" id="dateofbirth" placeholder="Donnez votre réponse ici">
+
+
+      </div>
+
+      <div class="tel-container">
+        <label for="tel">NUMÉRO DE TÉLÉPHONE*</label>
+        <input type="tel" autocomplete="off" id="tel" placeholder="06 01 02 03 04">
+
+      </div>
+
+      <div class="choice-container">
+        <label>QUESTION À CHOIX MULTIPLES*</label>
+        <div>
+          <input type="radio" autocomplete="off" id="choice" name="choice"><label> Oui</label>
+        </div>
+
+        <div>
+          <input type="radio" autocomplete="off" id="choice" name="choice" checked><label> Non</label>
+        </div>
+
+
+      </div>
+
+      <div class="email-container">
+        <label for="email">ADRESSE MAIL*</label>
+        <input type="text" autocomplete="off" id="email" placeholder="Donnez votre réponse ici">
+
+      </div>
+
+      <div class="switch-container">
+        <p>Voulez vous rececvoir les notifications mail?</p><label class="switch">
+          <input type="checkbox" checked />
+          <span></span>
+        </label>
+      </div>
+
+
+
+      <div>
+        <p>PIÈCE D'IDENTITÉ.*</p>
+        <div class="drop-zone">
+          <i class="fas fa-cloud-upload-alt"></i>
+          <Glissez class="drop-zone__prompt">Glissez votre fichier dans cette zone
+            </span>
+            <!-- <div class="drop-zone__thumb" data-label="files.txt"></div> -->
+            <input type="file" name="files" class="drop-zone__input">
+        </div>
+
+      </div>
+
+
+      <input type="submit" value="suivant" id="submit">
+
+    </form>
+
+  </div>
+
+
+
+</body>
+
+</html>
